@@ -3,6 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "PP Medium";
+  src: url("../fonts/pp-neue-montreal-cufonfonts/ppneuemontreal-medium.otf");
+}
+
+@font-face {
+  font-family: "PP Book";
+  src: url("../fonts/pp-neue-montreal-cufonfonts/ppneuemontreal-book.otf");
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/AeonikTRIAL-Regular.otf");
+}
+
+@font-face {
+  font-family: "Aeonik Bold";
+  src: url("../fonts/AeonikTRIAL-Bold.otf");
+}
+
 .image {
   object-fit: cover;
   width: 100%;

@@ -14,6 +14,16 @@
 }
 
 @font-face {
+  font-family: "PP Bold";
+  src: url("../fonts/pp-neue-montreal-cufonfonts/ppneuemontreal-bold.otf");
+}
+
+@font-face {
+  font-family: "PP Thin";
+  src: url("../fonts/pp-neue-montreal-cufonfonts/ppneuemontreal-thin.otf");
+}
+
+@font-face {
   font-family: "Aeonik";
   src: url("../fonts/AeonikTRIAL-Regular.otf");
 }
@@ -23,7 +33,7 @@
   src: url("../fonts/AeonikTRIAL-Bold.otf");
 }
 
-.image {
+img {
   object-fit: cover;
   width: 100%;
   height: auto;
@@ -32,4 +42,59 @@
 body,
 main {
   background-color: rgb(243 244 246);
+  color: black;
+}
+
+h1 {
+  font-family: "PP Book";
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "PP Medium";
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-family: "PP Medium";
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+h4 {
+  font-family: "PP Bold";
+  font-size: 1rem;
+}
+
+.bigText {
+  font-family: "PP Book";
+  font-size: 2.32rem;
+}
+
+p {
+  font-family: "PP Book";
+  font-size: 1.32rem;
+}
+
+.smallText {
+  font-family: "PP Book";
+  font-size: 0.8rem;
+}
+
+.paddingSection {
+  padding: 0 6vw;
+}
+
+hr {
+  border: solid black 1.5px;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
 }

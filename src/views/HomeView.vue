@@ -1,65 +1,64 @@
 <template>
-  <div class="">
-    <section id="heroSection" class="min-h-screen paddingSection">
-      <div class="min-h-[85vh] flex justify-between items-end">
-        <h1>Cool <br />Tagline <br />about this</h1>
-        <div>
-          <img src="../assets/icons/Arrow.png" alt="steady owl arrow" />
-        </div>
-      </div>
-    </section>
+  <section id="heroSection" class="min-h-screen paddingSection">
+    <TitlePage
+      :textLine1="titles[0]"
+      :textLine2="titles[1]"
+      :textLine3="titles[2]"
+    ></TitlePage>
+  </section>
 
-    <section id="promess" class="paddingSection">
-      <div class="flexCenter">
-        <h2>Cool title about CFO as a Service.</h2>
-        <p class="pb-[20vh]">
+  <section id="promess" class="paddingSection">
+    <div class="flexCenter">
+      <h2>Cool title about CFO as a Service.</h2>
+      <p class="pb-[20vh]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        suscipit in velit euismod ultrices. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Pellentesque suscipit in velit euismod
+        ultrices.
+      </p>
+    </div>
+    <hr />
+  </section>
+  <section id="services" class="paddingSection">
+    <div class="flex flex-col justify-center items-center">
+      <div class="text-center">
+        <h2>Here’s a cool promess about my services.</h2>
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          suscipit in velit euismod ultrices. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Pellentesque suscipit in velit euismod
-          ultrices.
+          suscipit in velit euismod ultrices.
         </p>
       </div>
+      <ServiceCard
+        v-for="(service, index) in services"
+        :key="index"
+        :title="service.title"
+        :text="service.text"
+        :imageService="service.imageService"
+      ></ServiceCard>
+      <div>
+        <Button :cta="callToAction" class="mb-[20vh]"></Button>
+      </div>
       <hr />
-    </section>
-    <section id="services" class="paddingSection">
-      <div class="flex flex-col justify-center items-center">
-        <div class="text-center">
-          <h2>Here’s a cool promess about my services.</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque suscipit in velit euismod ultrices.
-          </p>
-        </div>
-        <ServiceCard
-          v-for="(service, index) in services"
-          :key="index"
-          :title="service.title"
-          :text="service.text"
-          :imageService="service.imageService"
-        ></ServiceCard>
-        <div>
-          <Button :cta="callToAction" class="mb-[20vh]"></Button>
-        </div>
-        <hr />
-      </div>
-    </section>
-    <section id="process" class="paddingSection">
-      <div class="flexCenter">
-        <h2>How we get things done?</h2>
-        <p>Well, it’s simple simple.</p>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
+  <section id="process" class="paddingSection">
+    <div class="flexCenter">
+      <h2>How we get things done?</h2>
+      <p>Well, it’s simple simple.</p>
+    </div>
+  </section>
 </template>
 
 <script lang="ts">
 import ServiceCard from "@/components/ServiceCard.vue";
 import Button from "@/components/Button.vue";
+import TitlePage from "@/components/TitlePage.vue";
 
 export default {
   name: "HomeView",
   data() {
     return {
+      titles: ["Cool", "Tagline", "About you"],
       services: [
         {
           title: "FP&A",
@@ -84,6 +83,7 @@ export default {
   components: {
     ServiceCard,
     Button,
+    TitlePage,
   },
 };
 </script>

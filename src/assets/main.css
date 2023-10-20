@@ -19,6 +19,11 @@
 }
 
 @font-face {
+  font-family: "PP Thin";
+  src: url("../fonts/pp-neue-montreal-cufonfonts/ppneuemontreal-thin.otf");
+}
+
+@font-face {
   font-family: "Aeonik";
   src: url("../fonts/AeonikTRIAL-Regular.otf");
 }
@@ -70,6 +75,11 @@ h4 {
 p {
   font-family: "PP Book";
   font-size: 1.32rem;
+}
+
+.smallText {
+  font-family: "PP Book";
+  font-size: 0.8rem;
 }
 
 .paddingSection {
